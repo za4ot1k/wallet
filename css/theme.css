@@ -1,0 +1,55 @@
+:root{
+  --bg-0:#0A0C12;
+  --bg-1:#12101C;
+  --bg-2:#0E1420;
+  --glass-fill: rgba(255,255,255,0.06);
+  --glass-fill-strong: rgba(255,255,255,0.10);
+  --glass-border: rgba(255,255,255,0.14);
+  --glass-border-soft: rgba(255,255,255,0.08);
+  --text-0:#F5F3EF;
+  --text-1:rgba(245,243,239,0.68);
+  --text-2:rgba(245,243,239,0.42);
+  --gold:#F2B84B;
+  --gold-soft:rgba(242,184,75,0.16);
+  --green:#3FDA9A;
+  --green-soft:rgba(63,218,154,0.16);
+  --red:#FB7A88;
+  --red-soft:rgba(251,122,136,0.14);
+  --blur: 22px;
+  --radius-l: 28px;
+  --radius-m: 20px;
+  --radius-s: 14px;
+  --safe-t: env(safe-area-inset-top, 0px);
+  --safe-b: env(safe-area-inset-bottom, 0px);
+  --ease: cubic-bezier(.22,.8,.36,1);
+}
+:root[data-theme="light"]{
+  --bg-0:#EFEAF2;
+  --bg-1:#F6F1E9;
+  --bg-2:#E9EEF5;
+  --glass-fill: rgba(255,255,255,0.55);
+  --glass-fill-strong: rgba(255,255,255,0.72);
+  --glass-border: rgba(20,20,30,0.10);
+  --glass-border-soft: rgba(20,20,30,0.06);
+  --text-0:#171522;
+  --text-1:rgba(23,21,34,0.66);
+  --text-2:rgba(23,21,34,0.40);
+}
+*{box-sizing:border-box; -webkit-tap-highlight-color: transparent;}
+html,body{
+  margin:0;padding:0;
+  height:100dvh;
+  overflow:hidden;           /* the page itself never scrolls */
+  overscroll-behavior:none;
+}
+body{
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'SF Pro Text', system-ui, sans-serif;
+  background: var(--bg-0);
+  color: var(--text-0);
+  -webkit-font-smoothing: antialiased;
+  position: fixed;           /* pins the viewport so iOS Safari's toolbar
+                                 show/hide can't shift position:fixed children */
+  inset: 0;
+  width: 100%;
+}
+.num{font-family:'Space Grotesk','Inter',sans-serif; font-variant-numeric: tabular-nums; letter-spacing: -0.01em;}

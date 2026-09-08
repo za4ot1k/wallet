@@ -1,0 +1,19 @@
+/* ambient background blobs */
+.bg-blobs{position:fixed; inset:0; z-index:0; overflow:hidden; pointer-events:none;}
+.blob{position:absolute; border-radius:50%; filter: blur(70px); opacity:.55; will-change: transform;}
+.blob-1{width:340px;height:340px; background: radial-gradient(circle, #F2B84B 0%, transparent 70%); top:-80px; left:-60px; animation: float1 22s ease-in-out infinite;}
+.blob-2{width:300px;height:300px; background: radial-gradient(circle, #7C6AF2 0%, transparent 70%); top:220px; right:-100px; animation: float2 26s ease-in-out infinite;}
+.blob-3{width:260px;height:260px; background: radial-gradient(circle, #3FDA9A 0%, transparent 70%); bottom:40px; left:-80px; animation: float3 24s ease-in-out infinite;}
+:root[data-theme="light"] .blob{opacity:.35;}
+@keyframes float1{0%,100%{transform:translate(0,0)}50%{transform:translate(30px,40px)}}
+@keyframes float2{0%,100%{transform:translate(0,0)}50%{transform:translate(-40px,30px)}}
+@keyframes float3{0%,100%{transform:translate(0,0)}50%{transform:translate(20px,-30px)}}
+
+#app{
+  position:relative; z-index:1; max-width:480px; margin:0 auto;
+  height:100dvh;
+  overflow-y:auto;
+  -webkit-overflow-scrolling:touch;
+  overscroll-behavior-y:contain;
+  padding-bottom: calc(100px + var(--safe-b));
+}

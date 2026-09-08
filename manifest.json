@@ -1,0 +1,9 @@
+{
+  "name": "Гаманець — особисті фінанси",
+  "short_name": "Гаманець",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#0B0D12",
+  "theme_color": "#F2B84B",
+  "orientation": "portrait"
+}

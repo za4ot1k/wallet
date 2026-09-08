@@ -1,0 +1,42 @@
+/* toast */
+.toast{ position:fixed; left:50%; transform: translateX(-50%) translateY(20px); bottom: calc(96px + var(--safe-b)); z-index:200; padding:12px 20px; border-radius:16px; font-size:14px; font-weight:600; display:flex; align-items:center; gap:8px; opacity:0; transition: all .3s var(--ease); pointer-events:none;}
+.toast.show{ opacity:1; transform: translateX(-50%) translateY(0); }
+
+/* Stats */
+.donut-wrap{ display:flex; flex-direction:column; align-items:center; padding: 12px 0 4px;}
+.legend{ width:100%; margin-top:16px; display:flex; flex-direction:column; gap:11px;}
+.legend-row{ display:flex; align-items:center; gap:10px; font-size:13.5px;}
+.legend-row .bar-track{ flex:1; height:8px; border-radius:5px; background: var(--glass-fill); overflow:hidden;}
+.legend-row .bar-fill{ height:100%; border-radius:5px; transition: width .5s var(--ease);}
+.legend-name{ width:118px; flex:none; font-weight:600; display:flex; align-items:center; gap:8px;}
+.legend-amt{ width:78px; flex:none; text-align:right; font-weight:700; font-family:'Space Grotesk',sans-serif;}
+
+.period-tabs, .filter-tabs{ display:flex; gap:6px; padding:4px; border-radius: var(--radius-s); background: var(--glass-fill); border:1px solid var(--glass-border-soft); margin-bottom:16px;}
+.period-tabs button, .filter-tabs button{ flex:1; padding:9px 4px; border:none; background:transparent; border-radius:12px; font-size:13px; font-weight:600; color: var(--text-1); cursor:pointer; transition: all .18s;}
+.period-tabs button.active, .filter-tabs button.active{ background: var(--glass-fill-strong); color:var(--text-0); box-shadow: 0 2px 8px rgba(0,0,0,0.15);}
+
+.date-group-label{ font-size:12px; font-weight:700; color: var(--text-2); text-transform: uppercase; letter-spacing:0.04em; margin: 18px 4px 8px;}
+
+/* settings */
+.settings-row{ display:flex; align-items:center; justify-content:space-between; padding:15px 16px; border-bottom: 1px solid var(--glass-border-soft);}
+.settings-row:last-child{ border-bottom:none;}
+.settings-row .label{ font-size:15px; font-weight:500;}
+.settings-row .val{ font-size:14px; color: var(--text-1);}
+.seg{ display:flex; background: var(--glass-fill); border-radius:12px; padding:3px; gap:2px;}
+.seg button{ padding:6px 12px; font-size:12.5px; font-weight:600; border:none; background:transparent; border-radius:9px; color:var(--text-1); cursor:pointer;}
+.seg button.active{ background: var(--gold); color:#1A1305;}
+
+.confirm-overlay{ position:fixed; inset:0; background:rgba(5,5,10,0.55); backdrop-filter: blur(6px); z-index:200; display:flex; align-items:center; justify-content:center; opacity:0; pointer-events:none; transition: opacity .2s;}
+.confirm-overlay.open{ opacity:1; pointer-events:auto;}
+.confirm-card{ width: calc(100% - 64px); max-width:320px; padding:22px 20px; border-radius:24px; text-align:center; transform: scale(0.9); transition: transform .25s var(--ease);}
+.confirm-overlay.open .confirm-card{ transform: scale(1);}
+.confirm-card h3{ font-size:16px; margin:0 0 6px;}
+.confirm-card p{ font-size:13.5px; color:var(--text-1); margin:0 0 18px;}
+.confirm-actions{ display:flex; gap:10px;}
+
+.loading-dot{ display:flex; justify-content:center; padding: 60px 0; color: var(--text-2); font-size:13px;}
+
+.custom-range{ display:flex; gap:8px; margin-bottom: 14px;}
+.custom-range .text-input{ padding:10px 12px; font-size:13px;}
+
+::-webkit-scrollbar{ display:none; }

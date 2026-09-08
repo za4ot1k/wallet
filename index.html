@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1">
+<title>Гаманець</title>
+
+<link rel="manifest" href="manifest.json">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="theme-color" content="#0B0D12">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- Styles: split by concern -->
+<link rel="stylesheet" href="css/theme.css">
+<link rel="stylesheet" href="css/background.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/modal.css">
+<link rel="stylesheet" href="css/misc.css">
+</head>
+<body>
+
+<div class="bg-blobs"><div class="blob blob-1"></div><div class="blob blob-2"></div><div class="blob blob-3"></div></div>
+
+<div id="app"><div class="loading-dot">Завантаження…</div></div>
+
+<div class="navbar glass" id="navbar" style="display:none;">
+  <div class="nav-item" data-tab="home"><div class="nav-bubble"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11.5 12 4l9 7.5"/><path d="M5 10v9a1 1 0 0 0 1 1h4v-6h4v6h4a1 1 0 0 0 1-1v-9"/></svg></div><span>Головна</span></div>
+  <div class="nav-item" data-tab="history"><div class="nav-bubble"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18M3 12h18M3 18h12"/></svg></div><span>Історія</span></div>
+  <div class="nav-item" data-tab="stats"><div class="nav-bubble"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 20V10M10 20V4M17 20v-7"/></svg></div><span>Статистика</span></div>
+  <div class="nav-item" data-tab="settings"><div class="nav-bubble"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.6 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.6a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg></div><span>Налаштування</span></div>
+</div>
+
+<div id="modalRoot"></div>
+<div id="toastRoot"></div>
+<div id="confirmRoot"></div>
+
+<!-- Scripts: loaded in dependency order, plain globals (no bundler needed) -->
+<script src="js/icons.js"></script>
+<script src="js/categories.js"></script>
+<script src="js/utils.js"></script>
+<script src="js/state.js"></script>
+<script src="js/storage.js"></script>
+<script src="js/selectors.js"></script>
+<script src="js/render-app.js"></script>
+<script src="js/render-home.js"></script>
+<script src="js/render-history.js"></script>
+<script src="js/render-stats.js"></script>
+<script src="js/render-settings.js"></script>
+<script src="js/modal.js"></script>
+<script src="js/confirm-toast.js"></script>
+<script src="js/ui-events.js"></script>
+<script src="js/app-init.js"></script>
+</body>
+</html>
