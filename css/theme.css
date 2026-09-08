@@ -36,20 +36,24 @@
   --text-2:rgba(23,21,34,0.40);
 }
 *{box-sizing:border-box; -webkit-tap-highlight-color: transparent;}
-html,body{
+html{
   margin:0;padding:0;
-  height:100dvh;
-  overflow:hidden;           /* the page itself never scrolls */
-  overscroll-behavior:none;
+  background: var(--bg-0);   /* safety net: shows through instead of black if any gap remains */
+  overflow:hidden;
 }
 body{
+  margin:0;padding:0;
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'SF Pro Text', system-ui, sans-serif;
   background: var(--bg-0);
   color: var(--text-0);
   -webkit-font-smoothing: antialiased;
-  position: fixed;           /* pins the viewport so iOS Safari's toolbar
-                                 show/hide can't shift position:fixed children */
-  inset: 0;
-  width: 100%;
+  overflow:hidden;            /* the page itself never scrolls */
+  overscroll-behavior:none;
+  position: fixed;            /* pins the viewport so iOS Safari's toolbar
+                                  show/hide can't shift position:fixed children */
+  inset: 0;                   /* stretches to fill the viewport exactly —
+                                  no explicit height, so it can't drift from
+                                  the real screen height the way 100dvh can
+                                  in standalone/home-screen mode */
 }
 .num{font-family:'Space Grotesk','Inter',sans-serif; font-variant-numeric: tabular-nums; letter-spacing: -0.01em;}
