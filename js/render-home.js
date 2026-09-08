@@ -8,7 +8,7 @@ function renderHome(){
 
   return `
     <div class="topbar">
-      <div><h1>Привіт 👋</h1><div class="sub">${new Date().getDate()} ${MONTHS_UK[new Date().getMonth()]}, сьогодні</div></div>
+      <div><h1>Привіт</h1><div class="sub">${new Date().getDate()} ${MONTHS_UK[new Date().getMonth()]}, сьогодні</div></div>
     </div>
     <div class="screen">
       <div class="balance-card glass">

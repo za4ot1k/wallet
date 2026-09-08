@@ -94,6 +94,12 @@
 /* Buttons */
 .btn{ width:100%; padding:15px; border-radius: var(--radius-s); border:none; font-size:15.5px; font-weight:700; cursor:pointer; transition: transform .12s var(--ease);}
 .btn:active{ transform: scale(0.97); }
-.btn-primary{ background: linear-gradient(135deg, var(--gold), #E0A234); color:#1A1305; box-shadow: 0 8px 22px rgba(242,184,75,0.25);}
+.btn-primary{ background: linear-gradient(135deg, var(--gold), #E0A234); color:#1A1305; box-shadow: 0 8px 22px rgba(242,184,75,0.25);
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 10px;
+margin: 0 auto;
+}
 .btn-danger{ background: var(--red-soft); color: var(--red); }
 .btn-ghost{ background: var(--glass-fill); color: var(--text-0); border:1px solid var(--glass-border);}
